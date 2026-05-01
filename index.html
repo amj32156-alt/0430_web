@@ -14,173 +14,93 @@
     <meta property="og:image" content="./img/Petcode_ogimg.jpg">
     <meta property="og:url" content="깃페이지 주소">
     <meta property="og:site_name" content="브랜드명">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
 
-    <style>
-/* ==========================================================================
-   Bootstrap Flexbox & Layout 유틸리티 스타일 모음
-   ========================================================================== */
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
 
-/* 1. Display 및 컨테이너 */
-.d-flex {
-    display: flex;
-}
-.d-inline-flex {
-    display: inline-flex;
-}
-
-/* 2. Flex 방향 및 정렬 */
-.flex-row {
-    flex-direction: row;
-}
-.flex-row-reverse {
-    flex-direction: row-reverse;
-}
-.flex-column {
-    flex-direction: column;
-}
-.flex-column-reverse {
-    flex-direction: column-reverse;
-}
-
-/* 가로축 정렬 */
-.justify-content-start {
-    justify-content: flex-start;
-}
-.justify-content-center {
-    justify-content: center;
-}
-.justify-content-end {
-    justify-content: flex-end;
-}
-.justify-content-between {
-    justify-content: space-between;
-}
-.justify-content-around {
-    justify-content: space-around;
-}
-.justify-content-evenly {
-    justify-content: space-evenly;
-}
-
-/* 세로축 정렬 */
-.align-items-start {
-    align-items: flex-start;
-}
-.align-items-center {
-    align-items: center;
-}
-.align-items-end {
-    align-items: flex-end;
-}
-.align-items-baseline {
-    align-items: baseline;
-}
-.align-items-stretch {
-    align-items: stretch;
-}
-
-/* 여러 줄 정렬 (align-content) */
-.align-content-start {
-    align-content: flex-start;
-}
-.align-content-center {
-    align-content: center;
-}
-.align-content-end {
-    align-content: flex-end;
-}
-.align-content-between {
-    align-content: space-between;
-}
-.align-content-around {
-    align-content: space-around;
-}
-.align-content-stretch {
-    align-content: stretch;
-}
-
-/* 3. 아이템 관련 스타일 */
-.order-0 { order: 0; }
-.order-1 { order: 1; }
-.order-2 { order: 2; }
-.order-3 { order: 3; }
-.order-4 { order: 4; }
-.order-5 { order: 5; }
-.order-last { order: 999; } /* 또는 큰 정수값 */
-
-.align-self-start {
-    align-self: flex-start;
-}
-.align-self-center {
-    align-self: center;
-}
-.align-self-end {
-    align-self: flex-end;
-}
-.align-self-stretch {
-    align-self: stretch;
-}
-
-/* 4. 간격 (Gap) 스타일 */
-.gap-3 {
-    gap: 1rem; /* 16px 기준 */
-}
-.gap-x-3 {
-    column-gap: 1rem;
-}
-.gap-y-3 {
-    row-gap: 1rem;
-}
-
-/* 5. 테두리 (Border) 스타일 */
-.border {
-    border: 1px solid #dee2e6;
-}
-.border-0 {
-    border: 0;
-}
-
-/* 방향별 테두리 */
-.border-top { border-top: 1px solid #dee2e6; }
-.border-bottom { border-bottom: 1px solid #dee2e6; }
-.border-start { border-left: 1px solid #dee2e6; }
-.border-end { border-right: 1px solid #dee2e6; }
-
-/* 색상별 테두리 */
-.border-primary { border-color: #0d6efd; }
-.border-secondary { border-color: #6c757d; }
-.border-success { border-color: #198754; }
-.border-danger { border-color: #dc3545; }
-.border-warning { border-color: #ffc107; }
-.border-info { border-color: #0dcaf0; }
-.border-light { border-color: #f8f9fa; }
-.border-dark { border-color: #212529; }
-
-/* 두께별 테두리 */
-.border-1 { border-width: 1px; }
-.border-2 { border-width: 2px; }
-.border-3 { border-width: 3px; }
-.border-4 { border-width: 4px; }
-.border-5 { border-width: 5px; }
-    </style>
 </head>
 
 <body>
-    <header class="d-flex justify-content-between">
-        <h1>
-            <a href="https://amj32156-alt.github.io/0430_web/">
-                <img src="./img/Petcode_logo.svg" width="200px" alt="펫코드 로고" >
-            </a>
-        </h1>
+    <header class="border-bottom bg-white fixed-top" id="hd">
+        <div class="d-flex justify-content-between  container  align-items-center  ">
+            <h1 >
+                <a href="https://amj32156-alt.github.io/0430_web/" class="d-flex">
+                    <img src="./img/Petcode_logo.svg" width="156px" alt="펫코드 로고" >
+                </a>
+            </h1>
 
-        <nav>
-            <ul class="d-flex gap-3">
-                <li><a href="#about">About</a></li>
-                <li><a href="#review">고객 후기</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#newsletter">뉴스레터 구독하기</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <ul class="d-flex gap-4 ps-0 mb-0">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#review">고객 후기</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#newsletter">뉴스레터 구독하기</a></li>
+                </ul>
+            </nav>
+        </div>
+
     </header>
+    <div id="hiro_video" class="vh-100 bg-light d-flex flex-column justify-content-center" >
+        <div class="container ">
+            <div class="d-flex flex-column gap-4 align-items-start">
+                <div class="d-flex flex-column gap-3">
+                    <h2 class="h2">
+                        나의 반려동물에게 딱 맞는 케어,<br>
+                        궁금하지 않으신가요?
+                    </h2>
+                    <p>이제는 데이터를 기반으로 더 정확하고 체계적인 케어를 시작해보세요.</p>
+                </div>
+                
+                <button class="btn bg-dark text-white rounded-5 py-3 px-5">
+                    자세히 보기
+                </button>
+            </div>
+                
+        </div>
+    </div>
+    <div class="vh-100"></div>
+    <div id="fourtip" class="bg-light py-5">
+        <div class="container d-lg-flex justify-content-between gap-5 py-5">
+
+            <div class="d-flex flex-column gap-4 align-items-lg-start align-items-center mb-5">
+                <div class="d-flex flex-column gap-3 text-center text-lg-start">
+                    <h2 class="h2 mb-4 fw600">
+                        <span class="d-block fw100">4가지 단계로</span>
+                        시작하는 맞춤형 케어
+                    </h2>
+                    <p>반려동물의 건강은 추측이 아닌 데이터로 시작합니다.</p>
+                </div>
+            </div>
+            <div class="step_4 col-lg-6">
+                <ul class="d-flex flex-column gap-4 ms-lg-5">
+                    <li class="bg-white rounded-5 p-4 d-flex flex-column jusitfy-content-end align-items-start">
+                        <span>STEP 01</span>
+                        <h3>DNA 검사 키트 신청</h3>
+                        <p>유전자 검사 키트를 신청하고 <br>집에서 편하게 샘플을 채취합니다.</p>
+                    </li>
+                    <li class="bg-white rounded-5 p-4 d-flex flex-column jusitfy-content-end align-items-start">
+                        <span>STEP 02</span>
+                        <h3>DNA 분석</h3>
+                        <p>전문 연구소에서 반려동물의 유전자를 <br>분석하여 건강 정보를 파악합니다.</p>
+                    </li>
+                    <li class="bg-white rounded-5 p-4 d-flex flex-column jusitfy-content-end align-items-start">
+                        <span>STEP 03</span>
+                        <h3>맞춤 추천</h3>
+                        <p>분석 결과를 바탕으로 최적화된 사료, <br>간식, 영양제를 추천받습니다.</p>
+                    </li>
+                    <li class="bg-white rounded-5 p-4 d-flex flex-column jusitfy-content-end align-items-start">
+                        <span>STEP 04</span>
+                        <h3>정기 구독</h3>
+                        <p>추천 상품을 정기 구독하고 <br>지속적인 건강 관리를 시작합니다.</p>
+                    </li>
+                    
+                </ul>
+            </div>
+                
+        </div>
+    </div>
+    
 </body>
 </html>
